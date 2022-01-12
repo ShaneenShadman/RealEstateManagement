@@ -58,11 +58,11 @@ class PropertyControllerTest extends TestCase
         $this->assertTrue(true);
     }
 
-    // public function test_destroy()
-    // {
-    //     $this->data = new PropertyController();
-    //     $id=Property::where('location','Gulshan')->inRandomOrder()->limit(1)->get();
-    //     $response=$this->data->destroy($id[0]->id);
-    //     $this->assertTrue(true);
-    // }
+    public function test_destroy()
+    {
+        $this->data = new PropertyController();
+        $id=Property::where('location','abcdefg')->inRandomOrder()->limit(1)->get();
+        $response=$this->data->destroy($id[0]->id);
+        $this->assertTrue(true);
+    }
 }
